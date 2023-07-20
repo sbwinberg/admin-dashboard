@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 4fr;
+}
+
+.header {
+    border: 1px solid black;
+    grid-column: 2 / span 4;
+}
+
+.sidebar {
+    color: #ffffff;
+    grid-row: 1/4;
+    background-color: #38bdf8;
+    gap: 15px;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.logo {
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-items: start;
+    flex: 1;
+    margin-right: 16px;
+}
+
+.logotype {
+    height: 3rem;
+    margin: 8px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+}
+
+.home {
+    list-style-image: url(./home.svg);
+    height: 100%;
+}
