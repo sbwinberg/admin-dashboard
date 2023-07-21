@@ -1,5 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    font-family: "Roboto", sans-serif;
+}
 body {
     margin: 0;
+    background-color: rgba(135, 135, 241, 0.1);
+
 }
 
 .container {
@@ -19,19 +26,16 @@ body {
     grid-row: 1/4;
     background-color: #38bdf8;
     gap: 15px;
-}
 
-.main {
     display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: auto auto 1fr;
 }
 
 .logo {
     display: flex;
     color: white;
     align-items: center;
-    justify-items: start;
+    justify-items: center;
     flex: 1;
     margin-right: 16px;
 }
@@ -45,7 +49,219 @@ body {
     list-style-type: none;
 }
 
+
+/*CUSTOM BULLET LIST*/
 .home {
     list-style-image: url(./home.svg);
-    height: 100%;
+    font-weight: bold;
+    padding-left: 8px;
+}
+
+.home::marker {
+    font-size: 2.5rem;
+    grid-column: 1/2;
+}
+
+.profile {
+    list-style-image: url(./card-account-details-outline.svg);
+    font-weight: bold;
+    padding-left: 8px;
+}
+
+.profile::marker {
+    font-size: 2rem;
+}
+
+.message {
+    list-style-image: url(./message.svg);
+    font-weight: bold;
+    padding-left: 8px;
+}
+
+.message::marker {
+    font-size: 2rem;
+}
+
+.history {
+    list-style-image: url(./clock-time-three.svg);
+    font-weight: bold;
+    padding-left: 8px;
+
+}
+
+.history::marker {
+    font-size: 2rem;
+}
+
+.task {
+    list-style-image: url(./file-document-multiple.svg);
+    font-weight: bold;
+    padding-left: 8px;
+
+}
+
+.task::marker {
+    font-size: 2rem;
+}
+
+.community {
+    list-style-image: url(./account-group.svg);
+    font-weight: bold;
+    padding-left: 8px;
+
+}
+
+.community::marker {
+    font-size: 2rem;
+}
+
+.settings {
+    list-style-image: url(./cog.svg);
+    font-weight: bold;
+    padding-left: 8px;
+
+}
+
+.settings::marker {
+    font-size: 2rem;
+}
+
+.support {
+    list-style-image: url(./help-box.svg);
+    font-weight: bold;
+    padding-left: 8px;
+
+}
+
+.support::marker {
+    font-size: 2rem;
+}
+
+.privacy {
+    list-style-image: url(./shield-check.svg);
+    font-weight: bold;
+    padding-left: 8px;
+
+}
+
+.privacy::marker {
+    font-size: 2rem;
+}
+
+.nav, 
+.second-nav {
+    padding-left: 50px;
+}
+
+/*END OF CUSTOM BULLETS*/
+
+.searchbar {
+    background-color: rgba(151, 151, 151, 0);
+    height: 16px;
+
+}
+
+.searchbar::before {
+   background-image: url(./magnify.svg);
+   z-index: 10;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    margin-right: 16px;
+}
+
+.project {
+    background-color: #fff;
+    display: grid;
+    grid-template-rows: min-content;
+    padding: 8px;
+    border: 1px solid black;
+    margin: 16px;
+    border-radius: 10px;
+    border-left: 8px solid orange;
+    box-shadow: 4px 4px rgba(190, 190, 190, 0.1);
+}
+
+.announcements, .trending {
+    background-color: #fff;
+    display: grid;
+    padding: 8px;
+    border: 1px solid black;
+    margin: 16px;
+    border-radius: 10px;
+    box-shadow: 4px 4px rgba(190, 190, 190, 0.1);
+}
+
+.right {
+    display: grid;
+    grid-column: 3 / 4;
+    margin-top: 48px;
+}
+
+.main>p {
+    position: absolute;
+    margin-left: 16px;
+    font-weight: bold;
+}
+
+.projects {
+    margin-top: 48px;
+    display: grid;
+    grid-column: 1/3;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.pleft {
+    display: grid;
+    grid-column: 1 / 2;
+}
+
+.pright {
+    display: grid;
+    grid-column: 2 / 3;
+}
+
+.icon {
+    width: 20px;
+    margin: 0 8px;
+}
+
+.icons {
+    display: flex;
+    justify-content: end;
+}
+
+.rbar {
+    display: grid;
+    margin-top: 48px;
+}
+
+.trending {
+    margin-top: 48px;
+}
+
+.cont {
+    border-bottom: 1px solid black;
+}
+.cont>p{
+    margin-top: 4px;
+    font-size: small;
+}
+
+.cont>h5 {
+    margin-bottom: 0;
+}
+
+.cont:last-child {
+    border-bottom: none;
+}
+
+.announcements {
+    display: inline-grid;
+    /* grid-auto-rows: min-content; */
+    grid-template-rows: repeat(auto-fit, minmax(50px 1fr)) ;
+    /* height: 270px; */
 }
